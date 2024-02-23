@@ -8,45 +8,57 @@
     url("https://db.onlinewebfonts.com/t/9e991273bb4997c0b4be46bce5427daf.svg#Mantinia W00 Regular")format("svg");
 }
 
-
 body {
-    font-family: "Mantinia W00 Regular";
+  font-family: "Mantinia W00 Regular";
 }
 
-
 #countdown {
-    font-size: 80px;
-    text-align: center;
-    color: #cec066;
-    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.719);
+  font-size: 80px;
+  text-align: center;
+  color: #eedf7e;
+  font: bold;
+  -webkit-text-stroke: 1px rgb(0, 0, 0);
 }
 
 #title {
-font-size: 24px;
-text-align: center;
+  font-size: 24px;
+  text-align: center;
 }
 
 img {
-    margin: 0;
-    padding-bottom: 0;
-    width: 100%; 
-  }
+  margin: 0;
+  padding-bottom: 0;
+  width: 100%; 
+}
 
-  .play-button {
-    position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
-    cursor: pointer; 
-    width: 100px;
+.play-button {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  cursor: pointer; 
+  width: 100px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
 
-    backdrop-filter: blur(10px);
-  }
+.unmute-button {
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  cursor: pointer; 
+  width: 100px;
+  border-radius: 50%;
+  backdrop-filter: blur(10px);
+}
 
-  #video-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    min-height: 100%;
-    z-index: -1;
-  }
+
+
+
+#video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -1;
+}

@@ -1,7 +1,8 @@
 var imagePaths = ['./static/images/FireBoss.png','./static/images/HippoBoss.png','./static/images/HorseRunning.png',
 './static/images/LionBoss.png','./static/images/LucariaMaybe.png','./static/images/Miquella.png',
 './static/images/MohgArena.png','./static/images/OldGuy.png','./static/images/OpenWorld.png',
-'./static/images/Painting.png','./static/images/PotDungeon.png','./static/images/StormVeilMaybe.png','./static/images/TreeVeil.png'
+'./static/images/Painting.png','./static/images/PotDungeon.png','./static/images/StormVeilMaybe.png','./static/images/TreeVeil.png','./static/images/EldenRingOpening.png','./static/images/Liurnia.png'
+,'./static/images/Throne.png','./static/images/Swamp.png', './static/images/Dungeon.png'
 ]
 
 window.addEventListener('load', () => {
