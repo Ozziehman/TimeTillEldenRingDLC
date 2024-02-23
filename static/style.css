@@ -1,0 +1,52 @@
+@font-face {
+    font-family: "Mantinia W00 Regular";
+    src: url("https://db.onlinewebfonts.com/t/9e991273bb4997c0b4be46bce5427daf.eot");
+    src: url("https://db.onlinewebfonts.com/t/9e991273bb4997c0b4be46bce5427daf.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/9e991273bb4997c0b4be46bce5427daf.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/9e991273bb4997c0b4be46bce5427daf.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/9e991273bb4997c0b4be46bce5427daf.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/9e991273bb4997c0b4be46bce5427daf.svg#Mantinia W00 Regular")format("svg");
+}
+
+
+body {
+    font-family: "Mantinia W00 Regular";
+}
+
+
+#countdown {
+    font-size: 80px;
+    text-align: center;
+    color: #afa66b;
+    -webkit-text-stroke: 2px rgba(0, 0, 0, 0.719);
+}
+
+#title {
+font-size: 24px;
+text-align: center;
+}
+
+img {
+    margin: 0;
+    padding-bottom: 0;
+    width: 100%; 
+  }
+
+  .play-button {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    cursor: pointer; 
+    width: 100px;
+
+    backdrop-filter: blur(10px);
+  }
+
+  #video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+  }

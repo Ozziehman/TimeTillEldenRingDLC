@@ -4,9 +4,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Web Page</title>
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./static/style.css">
 </head>
 <body>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <div class="container-fluid">
+    <div class="col">
+      <div class="row">
+        <div id="title">
+          <img src="static/images/TitleNoBackground-transformed.png" style="width: 50%;">
+        </div>
+      </div>
+      <div class="row">
+        <div id="countdown">Loading...</div>
+      </div>
+    </div>
+  </div>
+  <img id="play-button" src="static/images/Playbutton.png" class="play-button" alt="Play Button">
 </body>
 <script src="static/script.js"></script>
+<script>
+  
+  const countDownDate = new Date("Jun 21, 2024 00:00:00 GMT+1").getTime();
+
+  // Update the countdown every second
+  const x = setInterval(function() {
+
+  // Get current date/time
+  const now = new Date().getTime();
+
+  // Calc the time remaining
+  const distance = countDownDate - now;
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // The countdown is done
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "The DLC Releases TODAY!!!";
+  }
+}, 1000);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const playButton = document.getElementById("play-button");
+ 
+  playButton.addEventListener("click", () => {
+    playButton.style.display = "none";
+    const youtubeVideoId = "qLZenOn7WUo";
+    const startSeconds = 2;
+    const iframe = document.createElement("iframe");
+    iframe.setAttribute("width", "100%");
+    iframe.setAttribute("height", "100%");
+    iframe.setAttribute("src", `https://www.youtube.com/embed/${youtubeVideoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${youtubeVideoId}&start=${startSeconds}`);;
+    iframe.setAttribute("frameborder", "0");
+    iframe.setAttribute("allowfullscreen", "1");
+    iframe.setAttribute("style", "position: fixed; top: 0; left: 50%; transform: translateX(-50%); width: 200%; height: 100vh; z-index: -1;");
+
+    document.body.appendChild(iframe);
+  });
+});
+</script>
+
 </html>
